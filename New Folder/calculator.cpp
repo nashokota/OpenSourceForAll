@@ -19,13 +19,26 @@ int divide(int a, int b)
     return a / b;
 }
 
+int calculator(int a, int b, int c)
+{
+    cout << "Calculator" << endl;
+    if(c==1){
+        cout << "Addition: ";
+        cout << add(a,b) << endl;
+    }else if(c==2)
+      {  cout << "Subtraction: ";
+        cout << subtract(a,b) << endl;
+      }else if(c==3)
+       { cout << "Multiplication: ";
+        cout << multiply(a,b) << endl;
+       }else if(c==4){
+        cout << "Division: ";
+        cout << divide(a,b) << endl;}
+}
 int main()
 {
-    int a, b;
-    cin >> a >> b;
-    cout << add(a,b) << endl;
-    cout << subtract(a,b) << endl;
-    cout << multiply(a,b) << endl;
-    cout << divide(a,b) << endl;
-        return 0;
+    int a, b, c;
+    cin >> a >> b>>c;
+    calculator(a, b ,c);
+    return 0;
 }
